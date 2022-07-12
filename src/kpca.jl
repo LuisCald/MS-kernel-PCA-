@@ -179,7 +179,7 @@ function fit(::Type{KernelPCA}, X::AbstractMatrix{T};
 
     # sort eigenvalues in descending order
     ord = sortperm(evl; rev=true)
-    ord = ord[1:min(length(ord), maxoutdim)]
+#     ord = ord[1:min(length(ord), maxoutdim)]
 
     # remove zero eigenvalues
     λ, α = if remove_zero_eig
